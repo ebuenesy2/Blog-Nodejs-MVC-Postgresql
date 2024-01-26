@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "226160e2-7971-4cc5-bc99-c1782df8c9bd",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23460183"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users - Tüm Veriler",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Tüm Veriler - Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/all?page=1&rowcount=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "rowcount",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users  - Arama",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/find/14",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"find",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Veri Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\":\"new user\",\r\n    \"email\": \"new@test.com\",\r\n    \"password\":\"123\",\r\n    \"repassword\":\"123\",\r\n    \"created_byid\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users  - Veri Güncelleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\":3,\r\n    \"full_name\":\"Wall Mathews güncelle\",\r\n    \"email\": \"wall@mathews.nra\",\r\n    \"password\":\"123\",\r\n    \"updated_byid\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Veri Silme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/delete/14",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"delete",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users  - Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n  \"email\": \"enes@test.com\",\r\n  \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blogs",
+			"item": [
+				{
+					"name": "Blogs - Tüm Veriler",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/blogs/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs - Tüm Veriler - Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/blogs/all?page=1&rowcount=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "rowcount",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs  - Arama",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/blogs/find/8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"find",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs  - Arama - Kullanıcı",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/blogs/find_user/14",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"find_user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs  - Arama - Kategori",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\":\"Money\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/blogs/find_category",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"find_category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs - Veri Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title\",\r\n    \"body\": \"body\",\r\n    \"category\":\"Business\",\r\n    \"created_byid\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/blogs/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs - Veri Ekleme - Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title token\",\r\n    \"body\": \"body\",\r\n    \"category\":\"Business\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiZW5lc0B0ZXN0LmNvbSIsImlhdCI6MTcwNjIyNDk4MiwiZXhwIjoxNzA2MjI4NTgyfQ.HmrKxoVThK2CYOOqG9cCEzu6_nmIAlHbnWz5b47aIsI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/blogs/add/token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"add",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs  - Veri Güncelleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\":3,\r\n    \"title\":\"title güncelle\",\r\n    \"body\": \"body add\",\r\n    \"category\":\"category add\",\r\n    \"updated_byid\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/blogs/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blogs - Veri Silme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/blogs/delete/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Comments - Tüm Veriler",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/comments/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments - Tüm Veriler - Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/comments/all?page=1&rowcount=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "rowcount",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments  - Arama",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/comments/find/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"find",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments  - Arama - Kullanıcı",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/comments/find_user/14",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"find_user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments - Veri Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blog_id\": 14,\r\n    \"comment\": \"comment add\",\r\n    \"created_byid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/comments/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments - Veri Ekleme Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blog_id\": 14,\r\n    \"comment\": \"comment add\",\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiZW5lc0B0ZXN0LmNvbSIsImlhdCI6MTcwNjIyNDk4MiwiZXhwIjoxNzA2MjI4NTgyfQ.HmrKxoVThK2CYOOqG9cCEzu6_nmIAlHbnWz5b47aIsI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/comments/add/token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"add",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments  - Veri Güncelleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\":5,\r\n    \"blog_id\": 1,\r\n    \"comment\": \"comment güncelle\",\r\n    \"updated_byid\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/comments/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments - Veri Silme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/comments/delete/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
