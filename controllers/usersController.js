@@ -12,12 +12,14 @@ exports.DataAll = async(req,res) => {
         const check = await dbModel.checkConnection();
         console.log('check:',check);
         
-        const result = await dbModel.getAllDB("public.two-factor-manager", {}, { rowcount: 10, page: 1 });
+        const result = await dbModel.getAllDB("two-factor-manager", {}, { rowcount: 10, page: 1 });
         console.log("result:",result);
 
-        res.send({
+        return res.send({
             data:result?.data
-        })
+        });
+
+        
 
         //! Bilgiler
         var info= { page:1, rowcount: 10, orderBy:table+"."+"id", order:"desc" }; //! Bilgiler
