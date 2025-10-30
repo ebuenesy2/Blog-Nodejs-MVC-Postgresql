@@ -1,6 +1,6 @@
 
 const dbModel = require('../model/db'); //! Model
-const table = "users"; //! Tablo Adı
+const table = "auth"; //! Tablo Adı
 var md5 = require('md5'); //! Md5
 var jwt = require('jsonwebtoken'); //! Token
 
@@ -9,6 +9,16 @@ exports.DataAll = async(req,res) => {
 
     try {
         
+        const check = await dbModel.checkConnection();
+        console.log('check:',check);
+        
+        const result = await dbModel.getAllDB("public.two-factor-manager", {}, { rowcount: 10, page: 1 });
+        console.log("result:",result);
+
+        res.send({
+            data:result?.data
+        })
+
         //! Bilgiler
         var info= { page:1, rowcount: 10, orderBy:table+"."+"id", order:"desc" }; //! Bilgiler
         //var info= { page:1, rowcount: 10, orderBy:"survey_options"+"."+"id", order:"desc" }; //! Bilgiler

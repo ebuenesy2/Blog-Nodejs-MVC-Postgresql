@@ -13,8 +13,23 @@ const knex = require('knex')({
 });
 //! Mysql SON
 
+//! Bağlantı Kontrol
+exports.checkConnection = async () => {
+    try {
+        const result = await knex.raw('SELECT 1+1 AS result');
+        return { status: "success", msg: "Veritabanı bağlantısı başarılı ✅", result: result[0] };
+    } catch (error) {
+        return { status: "error", msg: "Veritabanı bağlantısı başarısız ❌", error: error.message };
+    }
+};
+
+// const check = await dbModel.checkConnection();
+// console.log('check:',check);
+// return check;
+
 //! Tüm Veriler
 exports.getAllDB = async(table,query,info) => {
+    
 
     // return { function:"getAllDB", table:table, query:query, info:info  }
 
